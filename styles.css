@@ -1,0 +1,431 @@
+*{
+    
+   margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/*HOME PAGE-------------------------------------------*/
+.banner
+{
+  width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(greybackground.jpg);
+    background-size: cover;
+    background-position: center;  
+    
+}
+h{
+    font-family: DJB Ransom Note;
+    color:firebrick;
+    font-size: 19px;
+}
+/*NAVIGATION BAR STYLING------------------------------*/
+.navbar{
+    
+    width: 100%;
+    margin: auto;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #000000;
+    
+}
+.navbar ul li a::after{
+   content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10;
+    transition: 0.5s;
+ 
+}
+.navbar ul li a:hover::after{
+  width: 100%;    
+}
+/*VIDEO PART*/
+video{
+   width: 100%;
+    height: 50%; 
+}
+/*ABOUT SECTION---------------------------------------*/
+.about-container{
+    width: 100%;
+    height: 50%;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 12px auto;
+    display: flex;
+    margin: auto;
+    position: relative;
+    align-items: center;
+    padding: 1px 0;
+}
+.alltext{
+    padding-top: 70;
+    padding-bottom: 50;
+}
+
+.about-text h5{
+  display: block;
+    width: fit-content;
+    font-size: 4r;
+    position: relative;
+    color: transparent;
+    padding-left: 20;
+    animation: text_reveal .5s forwards;
+    animation-delay: 1.5s;
+}
+.about-text h5:nth-child(1)
+{
+    font-family: Eurofighter Condensed;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+    animation-delay: 1.5s;
+}
+.about-text h5:nth-child(3)
+{
+    font-family: DHF Happy Birthday Ryan;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 16px;
+    animation-delay: 2.5s;
+}
+.about-text h5:nth-child(5)
+{
+    font-family:Mongolian Baiti;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    animation-delay: 3.5s;
+}
+.about-text h5 span{
+  position: absolute;
+    top: 0;
+    left: 20;
+    height: 100%;
+    width: 0;
+    background-color:antiquewhite;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+    
+}
+.about-text h5:nth-child(1) span{
+    animation-delay: 1s;
+}
+.about-text h5:nth-child(3) span{
+    animation-delay: 2s;
+}
+.about-text h5:nth-child(5) span{
+   animation-delay: 3s; 
+}
+
+/*KEYFRAMES-------------------------------------------*/
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 20;
+    }
+    100%{
+        width: 20;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: black;
+    }
+}
+/*TEXT BUTTON-----------------------------------------*/
+.button{
+    padding-left: 20;
+    padding-top: 5;
+    padding-bottom:10;
+    border-radius: 30px;
+}
+.about-text button{
+    width: 115px;
+    height: 30px;
+    padding-top: 5px;
+    color: #262525;
+    outline: none;
+    border: none;
+    font-family: calibr;
+    background-color: transparent;
+    border: 2px solid #262525;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+.about-text button:hover{
+    width: 115px;
+    height: 30px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-family: calibr;
+    background-color: #262525;
+
+}
+.about-container img{
+    height: 230;
+    padding-left:130;
+}
+/*HOME FOOTER SECTION--------------------------------------*/
+.foooter{
+    
+    width: 100%;
+    margin: auto;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#000000;     
+}
+.foooter ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    
+}
+.foooter ul li a{
+    text-decoration: none;  
+}
+.icon{
+       width: 30px;
+    cursor: pointer;
+    
+}
+/*ABOUT PAGE------------------------------------------*/
+.about{
+    width: 100%;
+    padding: 78px 0px;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(about.jpg); 
+}
+.aboutnavbar{
+    width: 100%;
+    margin: auto;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+}
+.aboutnavbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    
+}
+.aboutnavbar ul li a{
+    text-decoration: none;
+    color: #000000;
+    
+}
+.about img{
+    height: 800px;
+    width: 420;
+}
+.about-text{
+width: 550px;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.aboutt-text h1{
+    color: white;
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+    margin-top: -80px;
+}
+.aboutt-text h5{
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+    letter-spacing: 2px;
+}
+span{
+    color: #f9004d;
+}
+.aboutt-text p{
+color: #fcfc;
+letter-spacing: 1px;
+line-height: 28px;
+font-size: 18px;
+margin-bottom: 4px;
+}
+.aboutt-text p3{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+.aboutt-text p4{
+    color: #fcfc;
+    letter-spacing: 10px;
+    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.aboutt-text h3{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+button{
+    background: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+button:hover{
+    background: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
+}
+.abouticon{
+    height: 30px;
+}
+.aboutfoooter{
+    
+    width: 60%;
+    margin: auto;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:transparent;
+    margin-right: 0%;
+}
+.aboutfoooter ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    
+}
+.aboutfoooter ul li a{
+    text-decoration: none;  
+}/*CONTACT US PAGE-------------------------------------------*/
+.contactbanner{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.0)),url(contact.jpg);
+    background-size: cover;
+    background-position: center;  
+}
+.aboutnavbar{
+    width: 100%;
+    margin: auto;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+}
+
+form{
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 4vw;
+    width: 80%;
+    max-width: 600%;
+    border-radius: 10px; 
+}
+form h{
+    color: #555;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+form input, form, textarea{
+    border: 0px;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+form button{
+    padding: 15px;
+    background: #f9004d;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+.aboutnavbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    
+}
+.aboutnavbar ul li a{
+    text-decoration: none;
+    color: #000000;
+    
+}
+
+/*FOOTER SECTION--------------------------------------*/
+.contactfoooter{
+    
+    width: 60%;
+    margin: auto;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:transparent;
+    margin-right: 0%;
+    margin-top: 2%;     
+}
+.contactfoooter ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+.contactfoooter ul li a{
+    text-decoration: none;
+}
+.contacticon{
+       width: 30px;
+    cursor: pointer;
+    
+}

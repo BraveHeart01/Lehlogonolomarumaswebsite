@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">    
+    <!DOCTYPE html>
+   </head>
+        <body>
+           <!---NAV Bar--->
+            
+        <div class="contactbanner">
+        
+            <div class="aboutnavbar">
+            <img src="brave-loGo.png"  class="logo">
+                <ul>
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="about2.html">About me</a> </li>
+                <li><a href="contact.html">Contact us</a> </li>
+                </ul>        
+            </div>
+            <div>
+                <form onsubmit="sendEmail(); reset(); return false;"> 
+                <h>GET IN TOUCH</h>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="surname" placeholder="Surname" required>
+                <input type="email" id="email" placeholder="Email address" required>
+                <input type="text" id="phone" placeholder="Phone no" required>
+                <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+                <button type="submit">Send</button>
+            </form>
+                
+                
+            <div class="contactfoooter">
+            <footer>
+              <ul>
+                <li><a href="https://www.linkedin.com/lehlogonolomaruma/"><img src="linkedin.png" class="contacticon"></a> </li>
+                <li><a href="https://www.instagram.com/braveheart_sahn?r=nametag"><img src="instagram.png" class="contacticon"></a> </li>
+                <li><a href="https://www.facebook.com/BraveHeart_sahn-104779087830233/"><img src="facebook.png" class="contacticon"></a> </li>
+                <li><a href="https://twitter.com/BraveheartSahn?s=09"> <img src="twitter.png" class="contacticon"></a> </li>
+                <li><a href="https://wa.me/qr/7AEJT3DTCWTSN1"> <img src="whatsapp.PNG" class="contacticon"></a> </li>
+                </ul> 
+                
+            </footer>
+            </div>
+            </div>
+            
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username : "marumalehlogonolo8@gmail.com",
+                    Password: "password",
+                    To : "marumalehlogonolo8@gmail.com",
+                    From : document.getElementById("email").value,
+                    Subject : "New Contact form enquiry",
+                    Body: "Name and Surname: " + document.getElementById("name").value 
+                    + "  "+ document.getElementById("surname").value 
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone no: " + document.getElementById("phone").value
+                    + "<br> Message: " +document.getElementById("message").value
+                }).then(
+                    message => alert("Message Sent Successfully")
+                );
+            }
+
+
+        </script>
+        </body>
+    
+    </html>
